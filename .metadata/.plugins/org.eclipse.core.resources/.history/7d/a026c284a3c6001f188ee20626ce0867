@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql:/localhost:3306/springfirstapp?useSSL=false
+    username: root
+    password: Deep5838@
+#jpa properties
+  jpa:
+    hibernate:
+      ddl-auto: update 

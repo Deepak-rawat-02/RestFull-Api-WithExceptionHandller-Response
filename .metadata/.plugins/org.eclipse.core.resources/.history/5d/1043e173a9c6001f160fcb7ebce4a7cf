@@ -1,0 +1,61 @@
+package com.RestApiProject1.packages.Model;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "CloudVenderInfo")
+public class CloudVender {
+	@Id
+	Long venderId;
+	String venderName, venderAddress;
+	Long venderNumber;
+
+	public CloudVender(Long vendrId, String venderName, String venderAddress, Long venderNumber) {
+		super();
+		this.venderId = vendrId;
+		this.venderName = venderName;
+		this.venderAddress = venderAddress;
+		this.venderNumber = venderNumber;
+	}
+
+	public CloudVender() {
+		super();
+	}
+
+	public String getVendrId() {
+		return venderId;
+	}
+
+	public void setVendrId(String vendrId) {
+		this.venderId = vendrId;
+	}
+
+	public String getVenderName() {
+		return venderName;
+	}
+
+	public void setVenderName(String venderName) {
+		this.venderName = venderName;
+	}
+
+	public String getVenderAddress() {
+		return venderAddress;
+	}
+
+	public void setVenderAddress(String venderAddress) {
+		this.venderAddress = venderAddress;
+	}
+
+	public Long getVenderNumber() {
+		return venderNumber;
+	}
+
+	public void setVenderNumber(Long venderNumber) {
+		this.venderNumber = venderNumber;
+	}
+
+}

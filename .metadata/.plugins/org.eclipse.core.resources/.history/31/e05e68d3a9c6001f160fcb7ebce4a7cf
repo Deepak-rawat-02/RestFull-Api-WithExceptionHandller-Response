@@ -1,0 +1,17 @@
+package com.RestApiProject1.packages.Service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.RestApiProject1.packages.Model.CloudVender;
+
+
+public interface CloudeVenderService {
+	public CloudVender getSingleVender(String venderId);
+	public String createVender(CloudVender cloudVender);
+	public String updatCloudVender(CloudVender cloudVender);
+	public String deleteVender(String venderId);
+	public List<CloudVender> getAllVender();
+
+}

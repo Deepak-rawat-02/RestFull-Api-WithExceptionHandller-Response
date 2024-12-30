@@ -1,0 +1,44 @@
+package com.RestApiProject1.packages.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.RestApiProject1.packages.Model.CloudVender;
+import com.RestApiProject1.packages.Repositary.CloudVenderRepository;
+
+public class CloudVenderServiceImpl implements CloudeVenderService{
+	
+	@Autowired
+	private CloudVenderRepository cloudVenderRepository;
+
+	@Override
+	public CloudVender getSingleVender(String id) {
+		return cloudVenderRepository.findById(id).get();
+	}
+
+	@Override
+	public String createVender(CloudVender cloudVender) {
+		cloudVenderRepository.save(cloudVender);
+		return "Successfully Created ";
+	}
+
+	@Override
+	public String updatCloudVender(CloudVender cloudVender) {
+		cloudVenderRepository.save(cloudVender);
+		return "Successfully Updated";
+	}
+
+	@Override
+	public String deleteVender(String id) {
+		cloudVenderRepository.deleteById(id);
+		return "Successfully Deleted";
+	}
+
+	@Override
+	public List<CloudVender> getAllVender() {
+		
+		return cloudVenderRepository.findAll();
+	}
+
+}
