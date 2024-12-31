@@ -1,0 +1,54 @@
+package com.RestApiProject1.packages.Exceptions;
+
+import org.springframework.http.HttpStatus;
+
+public class CloudVenderNotFoundException implements Runnable{
+	
+	String massege;
+	Throwable throwable;
+	HttpStatus httpStatus;
+	
+	public CloudVenderNotFoundException(String massege, Throwable throwable, HttpStatus httpStatus) {
+		super();
+		this.massege = massege;
+		this.throwable = throwable;
+		this.httpStatus = httpStatus;
+	}
+
+	public CloudVenderNotFoundException(String massege, HttpStatus httpStatus) {
+		super();
+		this.massege = massege;
+		this.httpStatus = httpStatus;
+	}
+
+	public String getMassege() {
+		return massege;
+	}
+
+	public void setMassege(String massege) {
+		this.massege = massege;
+	}
+
+	public Throwable getThrowable() {
+		return throwable;
+	}
+
+	public void setThrowable(Throwable throwable) {
+		this.throwable = throwable;
+	}
+
+	public HttpStatus getHttpStatus() {
+		return httpStatus;
+	}
+
+	public void setHttpStatus(HttpStatus httpStatus) {
+		this.httpStatus = httpStatus;
+	}
+
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

@@ -1,0 +1,16 @@
+package com.RestApiProject1.packages.Exceptions;
+
+import org.springframework.http.HttpStatus;
+
+public class CloudVenderNotFoundException {
+	
+	String massege;
+	Throwable throwable;
+	HttpStatus httpStatus;
+	public CloudVenderNotFoundException() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+
+}

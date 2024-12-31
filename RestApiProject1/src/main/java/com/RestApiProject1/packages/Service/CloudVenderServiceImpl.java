@@ -3,6 +3,8 @@ package com.RestApiProject1.packages.Service;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import com.RestApiProject1.packages.Exceptions.CloudVenderNotFoundException;
 import com.RestApiProject1.packages.Model.CloudVender;
 import com.RestApiProject1.packages.Repositary.CloudVenderRepository;
 
@@ -32,7 +34,10 @@ public class CloudVenderServiceImpl implements CloudeVenderService{
 
 	@Override
 	public CloudVender getSingleVender(Long venderId) {
-		
+		if(cloudVenderRepository.findById(venderId).isEmpty())
+		{
+			throw new CloudVenderNotFoundException("Requested Vender does not exist");
+		}
 		return cloudVenderRepository.findById(venderId).get();
 	}
 
@@ -41,5 +46,4 @@ public class CloudVenderServiceImpl implements CloudeVenderService{
 		cloudVenderRepository.deleteById(venderId);
 			return "Successfully Deleted";
 	}
-
 }

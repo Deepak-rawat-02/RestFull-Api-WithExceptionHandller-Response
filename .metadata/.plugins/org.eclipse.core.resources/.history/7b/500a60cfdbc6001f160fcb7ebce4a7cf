@@ -1,0 +1,13 @@
+package com.RestApiProject1.packages.Exceptions;
+
+import org.springframework.http.HttpStatus;
+
+public class CloudVenderException extends ClassNotFoundException{
+	
+	private String message;
+	private  Throwable throwable;
+	private HttpStatus httpStatus;
+	
+	
+
+}

@@ -1,0 +1,9 @@
+package com.RestApiProject1.packages.Responses;
+
+import org.springframework.http.ResponseEntity;
+
+public class ResponseHandler {
+	
+	public static ResponseEntity<Object> responseHandler
+
+}

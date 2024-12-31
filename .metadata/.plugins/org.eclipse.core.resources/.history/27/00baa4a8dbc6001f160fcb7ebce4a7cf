@@ -1,0 +1,7 @@
+package com.RestApiProject1.packages.Exceptions;
+
+public class CloudVenderException extends ClassNotFoundException{
+	
+	private String masseg
+
+}
